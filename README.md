@@ -34,7 +34,7 @@ API REST desenvolvida como solução para o Desafio Final do Hackathon Orbitall 
 
 ---
 
-## 🛠️ Tecnologias Usadas
+## 🛠️ Tecnologias
 
 As seguintes ferramentas e tecnologias foram utilizadas na construção do projeto:
 
