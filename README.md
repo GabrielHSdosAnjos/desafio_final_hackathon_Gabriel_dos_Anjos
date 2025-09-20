@@ -105,7 +105,7 @@ Cria um novo cliente no sistema.
 ```
 Success Response (201 Created):
 JSON
-
+```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
     "fullName": "Peter Parker",
@@ -115,14 +115,13 @@ JSON
     "updatedAt": "2025-09-20T12:30:00.123456",
     "active": true
 }
-
+```
 GET /customers/{id} - Buscar cliente por ID
-
 Retorna os detalhes de um cliente específico.
 
 Success Response (200 OK):
 JSON
-
+```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
     "fullName": "Peter Parker",
@@ -132,15 +131,14 @@ JSON
     "updatedAt": "2025-09-20T12:30:00.123456",
     "active": true
 }
-
+```
 GET /customers - Listar todos os clientes ativos
-
 Retorna uma lista com todos os clientes que estão ativos.
 
 Success Response (200 OK):
 JSON
 
-[
+
     {
         "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
         "fullName": "Peter Parker",
@@ -150,7 +148,7 @@ JSON
         "updatedAt": "2025-09-20T12:30:00.123456",
         "active": true
     }
-]
+
 
 PUT /customers/{id} - Atualizar dados do cliente
 
@@ -158,16 +156,16 @@ Atualiza as informações de um cliente existente.
 
 Request Body:
 JSON
-
+```
 {
   "fullName": "Peter B. Parker",
   "email": "peter.parker@dailybugle.com",
   "phone": "555-0103"
 }
-
+```
 Success Response (200 OK):
 JSON
-
+```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
     "fullName": "Peter B. Parker",
@@ -177,7 +175,7 @@ JSON
     "updatedAt": "2025-09-20T12:35:00.789123",
     "active": true
 }
-
+```
 DELETE /customers/{id} - Excluir cliente
 
 Realiza a exclusão lógica (soft delete) de um cliente, tornando-o inativo.
@@ -193,16 +191,16 @@ Registra uma nova transação para um cliente, que deve existir no sistema.
 
 Request Body:
 JSON
-
+```
 {
   "customerId": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
   "amount": 125.50,
   "cardType": "CRÉDITO"
 }
-
+```
 Success Response (201 Created):
 JSON
-
+```
 {
     "id": "f3a2b1c0-9d8e-7f6g-5h4i-3j2k1l0m9n8o",
     "customerId": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -211,14 +209,14 @@ JSON
     "createdAt": "2025-09-20T12:40:00.456789",
     "active": true
 }
-
+```
 GET /transactions?customerId={id} - Listar transações de um cliente
 
 Retorna todas as transações de um cliente específico.
 
 Success Response (200 OK):
 JSON
-
+```
 [
     {
         "id": "f3a2b1c0-9d8e-7f6g-5h4i-3j2k1l0m9n8o",
@@ -229,7 +227,7 @@ JSON
         "active": true
     }
 ]
-
+```
 
 
 
