@@ -102,7 +102,7 @@ Cria um novo cliente no sistema.
   "email": "peter.parker@dailybugle.com",
   "phone": "555-0102"
 }
-
+```
 Success Response (201 Created):
 JSON
 
