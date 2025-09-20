@@ -90,12 +90,9 @@ Siga os passos abaixo para executar a aplicação localmente.
 
 A seguir estão os endpoints disponíveis e exemplos de como utilizá-los com o Postman.
 
-### Clientes (`/customers`)
+Clientes (/customers)
+POST /customers - Cadastrar cliente
 
-#### `POST /customers` - Cadastrar um novo cliente
-Cria um novo cliente no sistema.
-
-**Request Body:**
 ```json
 {
   "fullName": "Peter Parker",
@@ -103,8 +100,7 @@ Cria um novo cliente no sistema.
   "phone": "555-0102"
 }
 ```
-Success Response (201 Created):
-JSON
+Resposta (201 Created):
 ```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -117,10 +113,8 @@ JSON
 }
 ```
 GET /customers/{id} - Buscar cliente por ID
-Retorna os detalhes de um cliente específico.
 
-Success Response (200 OK):
-JSON
+Resposta (200 OK)
 ```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -133,12 +127,9 @@ JSON
 }
 ```
 GET /customers - Listar todos os clientes ativos
-Retorna uma lista com todos os clientes que estão ativos.
+Resposta (200 OK)
 
-Success Response (200 OK):
-JSON
-
-
+```
     {
         "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
         "fullName": "Peter Parker",
@@ -148,14 +139,11 @@ JSON
         "updatedAt": "2025-09-20T12:30:00.123456",
         "active": true
     }
+```
+
+PUT /customers/{id} - Atualizar cliente
 
 
-PUT /customers/{id} - Atualizar dados do cliente
-
-Atualiza as informações de um cliente existente.
-
-Request Body:
-JSON
 ```
 {
   "fullName": "Peter B. Parker",
@@ -164,7 +152,6 @@ JSON
 }
 ```
 Success Response (200 OK):
-JSON
 ```
 {
     "id": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -177,20 +164,11 @@ JSON
 }
 ```
 DELETE /customers/{id} - Excluir cliente
-
-Realiza a exclusão lógica (soft delete) de um cliente, tornando-o inativo.
-
 Success Response (204 No Content):
-(Nenhum corpo de resposta)
 
 Transações (/transactions)
+POST /transactions - Criar transação
 
-POST /transactions - Criar uma nova transação
-
-Registra uma nova transação para um cliente, que deve existir no sistema.
-
-Request Body:
-JSON
 ```
 {
   "customerId": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -198,8 +176,8 @@ JSON
   "cardType": "CRÉDITO"
 }
 ```
+
 Success Response (201 Created):
-JSON
 ```
 {
     "id": "f3a2b1c0-9d8e-7f6g-5h4i-3j2k1l0m9n8o",
@@ -210,14 +188,11 @@ JSON
     "active": true
 }
 ```
+
 GET /transactions?customerId={id} - Listar transações de um cliente
-
-Retorna todas as transações de um cliente específico.
-
-Success Response (200 OK):
-JSON
+Success Response (200 OK)
 ```
-[
+
     {
         "id": "f3a2b1c0-9d8e-7f6g-5h4i-3j2k1l0m9n8o",
         "customerId": "e7f4b3d8-1c5e-4b2a-8f9d-3c1e2b6a7c8d",
@@ -226,7 +201,7 @@ JSON
         "createdAt": "2025-09-20T12:40:00.456789",
         "active": true
     }
-]
+
 ```
 
 
