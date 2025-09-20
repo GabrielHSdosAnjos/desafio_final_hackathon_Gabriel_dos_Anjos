@@ -77,13 +77,6 @@ Siga os passos abaixo para executar a aplicação localmente.
 4.  **A aplicação estará disponível em:**
     - `http://localhost:8080`
 
-5.  **(Opcional) Acessar o console do H2 Database:**
-    - Para visualizar o banco de dados em memória, acesse `http://localhost:8080/h2-console` no seu navegador.
-    - Use as seguintes credenciais (definidas em `application.properties`):
-        - **JDBC URL:** `jdbc:h2:mem:hackathondb` (ou o nome que você usou)
-        - **User Name:** `sa`
-        - **Password:** `password`
-
 ---
 
 ## 🔗 Endpoints da API
